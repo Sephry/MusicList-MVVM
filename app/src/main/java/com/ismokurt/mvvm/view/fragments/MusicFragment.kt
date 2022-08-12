@@ -14,12 +14,14 @@ import com.ismokurt.mvvm.databinding.FragmentMusicBinding
 import com.ismokurt.mvvm.databinding.SonglistItemRcvBinding
 import com.ismokurt.mvvm.view.adapter.MusicAdapter
 import com.ismokurt.mvvm.viewModel.MusicViewModel
+import java.io.PipedOutputStream
 import java.util.*
 
 class MusicFragment : Fragment() {
 
     private val viewModel :MusicViewModel by viewModels()
-    private lateinit var adapter : MusicAdapter
+    //private lateinit var adapter : MusicAdapter
+    private val adapter: MusicAdapter by lazy { MusicAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,10 +32,12 @@ class MusicFragment : Fragment() {
         viewModel.getMusic().observe(viewLifecycleOwner) {
 
             binding.recyclerViewMusic.layoutManager =GridLayoutManager(requireContext(),1)
-            binding.recyclerViewMusic.adapter = MusicAdapter(it)
+            // binding.recyclerViewMusic.adapter = MusicAdapter()
+            adapter.setData(it)
+            binding.recyclerViewMusic.adapter =adapter
+
 
         }
-
 
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
             override fun onMove(
@@ -48,10 +52,7 @@ class MusicFragment : Fragment() {
 
 
                 val position = viewHolder.adapterPosition
-
-                adapter = MusicAdapter()
                 val song = adapter.musicList[position]
-
 
                 viewModel.deleteMusic(song)
                 Snackbar.make(binding.root,"Deleted!",Snackbar.LENGTH_LONG).apply {

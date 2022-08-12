@@ -6,13 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ismokurt.mvvm.databinding.SonglistItemRcvBinding
 import com.ismokurt.mvvm.entity.Song
 
-class MusicAdapter(val musicList: List<Song>):  RecyclerView.Adapter<MusicAdapter.MusicViewHolder>() {
+
+class MusicAdapter():  RecyclerView.Adapter<MusicAdapter.MusicViewHolder>() {
 
 
     class MusicViewHolder(val binding: SonglistItemRcvBinding) :RecyclerView.ViewHolder(binding.root)
-
-    private var musicList = emptyList<Song>()
-
+    var musicList = emptyList<Song>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicViewHolder {
         return MusicViewHolder(
             SonglistItemRcvBinding.inflate(
@@ -32,13 +31,8 @@ class MusicAdapter(val musicList: List<Song>):  RecyclerView.Adapter<MusicAdapte
     }
 
     override fun getItemCount() = musicList.size
-
-
-    fun setData(musicList: List<Song>){
-        musicList = musicList
+    fun setData(newData: List<Song>){
+        musicList = newData
         notifyDataSetChanged()
     }
-
-
-
 }
