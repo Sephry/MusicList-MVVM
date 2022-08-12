@@ -8,6 +8,7 @@
 - Room Database
 -  Music listed using RecyclerView .
 - LiveData
+- Bottom Navigation Bar
 
 # Screens
 
