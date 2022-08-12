@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragments.SettingsFragment"
+    android:layout_margin="30dp"
+    android:layout_gravity="center"
+    >
+
+
+
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/addMusicName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Music Name"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/addSingerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Singer Name"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/addAlbumName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Album Name"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="80dp"/>
+</LinearLayout>

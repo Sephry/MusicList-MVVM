@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/secondGreen"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/song_list_item_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Singer Name : Ezhel"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="italic|bold"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

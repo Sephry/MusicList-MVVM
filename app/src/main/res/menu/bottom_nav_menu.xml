@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/musicPage"
+            android:icon="@drawable/ic_baseline_music_note_24"
+            android:title="Music"
+            app:showAsAction="withText|always"/>
+
+        <item
+            android:id="@+id/singerPage"
+            app:showAsAction="withText|always"
+            android:title="Singer"
+            android:icon="@drawable/ic_baseline_library_music_24"/>
+
+        <item
+            android:id="@+id/settingPage"
+            android:title="Settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            app:showAsAction="withText|always" />
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="firstBlue">#282B59</color>
+    <color name="secondBlue">#118CD9</color>
+    <color name="firstGreen">#14D945</color>
+    <color name="secondGreen">#12A628</color>
+
+    <color name="yellow">#F2BF27</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="itemBack">#616161</color>
+    <color name="settingsBack">#212121</color>
+</resources>
